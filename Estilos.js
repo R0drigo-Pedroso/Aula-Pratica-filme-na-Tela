@@ -31,12 +31,33 @@ const Estilos = StyleSheet.create({
     justifyContent: "space-evenly",
     width: "80%",
   },
+  botaoInicial: {
+    borderStyle: "solid",
+    borderWidth: 2,
+    padding: 16,
+    backgroundColor: "#5451a6",
+    borderRadius: 5,
+  },
+  textBotao: {
+    color: "white",
+  },
+
   viewRodape: {
-    flex: 0.4,
+    flex: 0.5,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    width: "80%",
+    width: "100%",
+    backgroundColor: "#5451a6",
+  },
+  botaoRodape: {
+    padding: 16,
+    margin: 5,
+    backgroundColor: "#5451a6",
+  },
+  textBotao: {
+    color: "white",
+    textTransform: "uppercase",
   },
 });
 

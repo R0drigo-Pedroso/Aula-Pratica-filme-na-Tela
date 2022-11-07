@@ -1,5 +1,5 @@
 import { useFonts } from "expo-font";
-import { Button, Image, SafeAreaView, Text, View } from "react-native";
+import { Image, Pressable, SafeAreaView, Text, View } from "react-native";
 
 import estilos from "./Estilos";
 
@@ -25,13 +25,23 @@ const App = () => {
       </View>
 
       <View style={estilos.viewBotoes}>
-        <Button title="Buscar filmes" />
-        <Button title="Filmes Favoritos" />
+        <Pressable style={estilos.botaoInicial}>
+          <Text style={estilos.textBotao}>Buscar filmes</Text>
+        </Pressable>
+
+        <Pressable style={estilos.botaoInicial}>
+          <Text style={estilos.textBotao}>Filme Favoritos</Text>
+        </Pressable>
       </View>
 
       <View style={estilos.viewRodape}>
-        <Button title="Privacidade" />
-        <Button title="Sobre" />
+        <Pressable style={estilos.botaoRodape}>
+          <Text style={estilos.textBotao}>Privacidade</Text>
+        </Pressable>
+
+        <Pressable style={estilos.botaoRodape}>
+          <Text style={estilos.textBotao}>Sobre</Text>
+        </Pressable>
       </View>
     </SafeAreaView>
   );
