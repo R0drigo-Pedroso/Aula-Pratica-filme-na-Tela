@@ -1,6 +1,8 @@
 import { useFonts } from "expo-font";
 import { Image, Pressable, SafeAreaView, Text, View } from "react-native";
 
+import { Ionicons } from "@expo/vector-icons";
+
 import estilos from "./Estilos";
 
 import logo from "./assets/image/logo.png";
@@ -26,21 +28,31 @@ const App = () => {
 
       <View style={estilos.viewBotoes}>
         <Pressable style={estilos.botaoInicial}>
-          <Text style={estilos.textBotao}>Buscar filmes</Text>
+          <Text style={estilos.textBotao}>
+            <Ionicons name="search-circle-outline" size={19} color="white" /> Buscar filmes
+          </Text>
         </Pressable>
 
         <Pressable style={estilos.botaoInicial}>
-          <Text style={estilos.textBotao}>Filme Favoritos</Text>
+          <Text style={estilos.textBotao}>
+            <Ionicons name="ios-star-outline" size={16} color="gold" /> Filme
+            Favoritos
+          </Text>
         </Pressable>
       </View>
 
       <View style={estilos.viewRodape}>
         <Pressable style={estilos.botaoRodape}>
-          <Text style={estilos.textBotao}>Privacidade</Text>
+          <Text style={estilos.textBotao}>
+            <Ionicons name="lock-closed-outline" size={16} color="white" />{" "}
+            Privacidade
+          </Text>
         </Pressable>
 
         <Pressable style={estilos.botaoRodape}>
-          <Text style={estilos.textBotao}>Sobre</Text>
+          <Text style={estilos.textBotao}>
+            <Ionicons name="bookmark-outline" size={16} color="white" /> Sobre
+          </Text>
         </Pressable>
       </View>
     </SafeAreaView>

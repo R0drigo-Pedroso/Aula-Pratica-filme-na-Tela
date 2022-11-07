@@ -34,9 +34,11 @@ const Estilos = StyleSheet.create({
   botaoInicial: {
     borderStyle: "solid",
     borderWidth: 2,
-    padding: 16,
+    padding: 15,
     backgroundColor: "#5451a6",
     borderRadius: 5,
+    marginRight: 25,
+    marginLeft: 25,
   },
   textBotao: {
     color: "white",
