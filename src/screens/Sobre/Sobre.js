@@ -5,10 +5,10 @@ import estilos from "./estilosSobre";
 const Sobre = () => {
   return (
     <SafeAreaView style={estilos.container}>
-      <Text style={estilos.titulo}>Sobre o app NOME DO SEU APP</Text>
+      <Text style={estilos.titulo}>Sobre o app FILME NA TELA</Text>
 
       <Text style={estilos.texto}>
-        O <Text style={estilos.nomeApp}> Filme na Tela </Text> é um aplicativo
+        O <Text style={estilos.nomeApp}> FILME NA TELA </Text> é um aplicativo
         com a finalidade de permitir a busca por informações sobre filmes
         existentes na base de dados pública disponibilizada pelo site The Movie
         Database (TMDb).
@@ -26,7 +26,7 @@ const Sobre = () => {
         dos usuários.
       </Text>
 
-      <Text style={estilos.texto}>NOME DO SEU APP &copy; 2022 */</Text>
+      <Text style={estilos.texto}>FILME NA TELA &copy; 2022 */</Text>
     </SafeAreaView>
   );
 };

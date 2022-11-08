@@ -16,12 +16,12 @@ const App = () => {
     <>
       <StatusBar barStyle="default" />
       <NavigationContainer>
-        <stack.Navigator>
+        <stack.Navigator initialRouteName="Home">
           <stack.Screen name="Home" component={Home} />
           <stack.Screen name="Sobre" component={Sobre} />
           <stack.Screen name="Privacidade" component={Privacidade} />
           <stack.Screen name="Favoritos" component={Favoritos} />
-          <stack.Screen name="Busca" component={FormBusca} />
+          <stack.Screen name="FormBusca" component={FormBusca} />
         </stack.Navigator>
       </NavigationContainer>
     </>

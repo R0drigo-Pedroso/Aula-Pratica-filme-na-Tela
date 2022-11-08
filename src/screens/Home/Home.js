@@ -5,7 +5,7 @@ import { Ionicons } from "@expo/vector-icons";
 import logo from "../../../assets/image/logo.png";
 import estilos from "./estiloHome";
 
-const Home = () => {
+const Home = ({ navigation }) => {
   /* Inserindo fontes e carrega-lá */
   const [fonteCarregada] = useFonts({
     monoton: require("../../../assets/fonts/Monoton-Regular.ttf"),
@@ -22,14 +22,25 @@ const Home = () => {
       </View>
 
       <View style={estilos.viewBotoes}>
-        <Pressable style={estilos.botaoInicial}>
+        <Pressable
+          style={estilos.botaoInicial}
+          /* onPress - realiza a navegação entre paginas */
+          onPress={() => {
+            navigation.navigate("FormBusca");
+          }}
+        >
           <Text style={estilos.textBotao}>
             <Ionicons name="search-circle-outline" size={19} color="white" />{" "}
             Buscar filmes
           </Text>
         </Pressable>
 
-        <Pressable style={estilos.botaoInicial}>
+        <Pressable
+          style={estilos.botaoInicial}
+          onPress={() => {
+            navigation.navigate("Favoritos");
+          }}
+        >
           <Text style={estilos.textBotao}>
             <Ionicons name="ios-star-outline" size={16} color="gold" /> Filme
             Favoritos
@@ -38,14 +49,24 @@ const Home = () => {
       </View>
 
       <View style={estilos.viewRodape}>
-        <Pressable style={estilos.botaoRodape}>
+        <Pressable
+          style={estilos.botaoRodape}
+          onPress={() => {
+            navigation.navigate("Privacidade");
+          }}
+        >
           <Text style={estilos.textBotao}>
             <Ionicons name="lock-closed-outline" size={16} color="white" />{" "}
             Privacidade
           </Text>
         </Pressable>
 
-        <Pressable style={estilos.botaoRodape}>
+        <Pressable
+          style={estilos.botaoRodape}
+          onPress={() => {
+            navigation.navigate("Sobre");
+          }}
+        >
           <Text style={estilos.textBotao}>
             <Ionicons name="bookmark-outline" size={16} color="white" /> Sobre
           </Text>
