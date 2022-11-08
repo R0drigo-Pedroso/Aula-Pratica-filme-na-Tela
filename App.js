@@ -16,12 +16,36 @@ const App = () => {
     <>
       <StatusBar barStyle="default" />
       <NavigationContainer>
-        <stack.Navigator initialRouteName="Home">
-          <stack.Screen name="Home" component={Home} />
+        <stack.Navigator
+          initialRouteName="Home"
+          /* Estilização padrão para todos */
+          screenOptions={{
+            headerStyle: {
+              backgroundColor: "#5451a6",
+            },
+            headerTintColor: "white",
+          }}
+          /* Finalização Estilização  */
+        >
+          <stack.Screen
+            name="Home"
+            component={Home}
+            options={{ headerShown: false }}
+          />
+
           <stack.Screen name="Sobre" component={Sobre} />
           <stack.Screen name="Privacidade" component={Privacidade} />
-          <stack.Screen name="Favoritos" component={Favoritos} />
-          <stack.Screen name="FormBusca" component={FormBusca} />
+          <stack.Screen
+            name="Favoritos"
+            component={Favoritos}
+            options={{ title: "Filmes Favoritos" }}
+          />
+
+          <stack.Screen
+            name="FormBusca"
+            component={FormBusca}
+            options={{ title: "Buscar Filmes" }}
+          />
         </stack.Navigator>
       </NavigationContainer>
     </>
