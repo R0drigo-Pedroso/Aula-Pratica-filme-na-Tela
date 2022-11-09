@@ -28,7 +28,7 @@ const estilos = StyleSheet.create({
   },
 
   input: {
-    width: "80%",
+    flex: 1,
     height: 40,
     margin: 12,
     borderWidth: 1,

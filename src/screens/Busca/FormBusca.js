@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import {
   SafeAreaView,
   Text,
@@ -10,9 +9,29 @@ import {
 import { Ionicons } from "@expo/vector-icons";
 
 import estilos from "./estiloBusca";
+import { useState } from "react";
 
 const FormBusca = () => {
-  const [text, onChangeText] = React.useState(null);
+  /* 
+    Captura em tempo real do que é digitado no TextInput atráves do evento inChangeText
+
+    const filmeDigitado = (valorDigitado) => {
+      setFilme(valorDigitado)
+    };
+
+    // Hook useState para monitorar/armazenar o filme que será buscado a partir do formulario
+    const [text, setFilme] useState();
+
+    // função chamada toda vez que o botão for pressionado (usamos a prop onPress do Burron)
+    // Se filme (gerenciado pelo useState) estiver vazio/undefined/salsy 
+    const buscarFilmes = () => {
+      if(!filme){
+        console.log("Opa! digite um filme")
+      }
+    };
+   */
+
+  const [text, onChangeText] = useState(null);
 
   // const [procurar, setProcurar] = useState(false);
 
@@ -27,7 +46,7 @@ const FormBusca = () => {
         <Ionicons
           style={estilos.icons}
           name="film-outline"
-          size={50}
+          size={48}
           color="black"
         />
         <TextInput
@@ -42,6 +61,7 @@ const FormBusca = () => {
         title="Procurar"
         color="#5154a6"
         onPress={() => Alert.alert(text)}
+        /* onPress={buscarFilmes} */
       />
     </SafeAreaView>
   );
