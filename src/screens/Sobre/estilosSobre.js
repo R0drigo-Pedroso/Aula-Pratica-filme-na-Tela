@@ -19,6 +19,11 @@ const estilos = StyleSheet.create({
     color: "#5651a6",
     fontWeight: "bold",
   },
+
+  logoApi: {
+    marginVertical: 8,
+    alignItems: "center",
+  },
 });
 
 export default estilos;

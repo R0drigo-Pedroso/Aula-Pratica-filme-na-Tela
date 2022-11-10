@@ -3,7 +3,7 @@ import { Image, Pressable, SafeAreaView, Text, View } from "react-native";
 import { useFonts } from "expo-font";
 import { Ionicons } from "@expo/vector-icons";
 import logo from "../../../assets/image/logo.png";
-import estilos from "./estiloHome";
+import estilos from "./estilosHome";
 
 const Home = ({ navigation }) => {
   /* Inserindo fontes e carrega-lá */

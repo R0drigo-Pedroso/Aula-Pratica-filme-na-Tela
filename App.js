@@ -7,6 +7,7 @@ import Sobre from "./src/screens/Sobre/Sobre";
 import Privacidade from "./src/screens/Privacidade/Privacidade";
 import Favoritos from "./src/screens/Favoritos/Favoritos";
 import FormBusca from "./src/screens/Busca/FormBusca";
+import Resultados from "./src/screens/Resultados/Resultados";
 
 const App = () => {
   /* Inicializando atráves de uma constante o gerenciador de navegação Stack (Pilha de telas) */
@@ -35,6 +36,9 @@ const App = () => {
 
           <stack.Screen name="Sobre" component={Sobre} />
           <stack.Screen name="Privacidade" component={Privacidade} />
+
+          <stack.Screen name="Resultados" component={Resultados} />
+
           <stack.Screen
             name="Favoritos"
             component={Favoritos}

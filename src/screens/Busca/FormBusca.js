@@ -8,32 +8,21 @@ import {
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
-import estilos from "./estiloBusca";
+import estilos from "./estilosBusca";
 import { useState } from "react";
 
-const FormBusca = () => {
-  /* 
-    Captura em tempo real do que é digitado no TextInput atráves do evento inChangeText
-
-    const filmeDigitado = (valorDigitado) => {
-      setFilme(valorDigitado)
-    };
-
-    // Hook useState para monitorar/armazenar o filme que será buscado a partir do formulario
-    const [text, setFilme] useState();
-
-    // função chamada toda vez que o botão for pressionado (usamos a prop onPress do Burron)
-    // Se filme (gerenciado pelo useState) estiver vazio/undefined/salsy 
-    const buscarFilmes = () => {
-      if(!filme){
-        console.log("Opa! digite um filme")
-      }
-    };
-   */
-
-  const [text, onChangeText] = useState(null);
-
+const FormBusca = ({ navigation }) => {
+  const [filme, onChangeText] = useState(null);
   // const [procurar, setProcurar] = useState(false);
+
+  const buscaFilme = () => {
+    if (!filme) {
+      return Alert.alert("Opa", "digite um filme");
+    }
+
+    /* Usamos a props navigation (que vem do React Navigation pragramado no App) para acessar uma nova tela (no caso, resultados). Para esta tela, passamos como objetivo os dados digitados no formulario (neste caso, filme) */
+    navigation.navigate("Resultados", { filme });
+  };
 
   return (
     <SafeAreaView style={estilos.container}>
@@ -52,7 +41,7 @@ const FormBusca = () => {
         <TextInput
           style={estilos.input}
           onChangeText={onChangeText}
-          value={text}
+          value={filme}
           placeholder="Filme"
         />
       </View>
@@ -60,7 +49,7 @@ const FormBusca = () => {
       <Button
         title="Procurar"
         color="#5154a6"
-        onPress={() => Alert.alert(text)}
+        onPress={buscaFilme}
         /* onPress={buscarFilmes} */
       />
     </SafeAreaView>
