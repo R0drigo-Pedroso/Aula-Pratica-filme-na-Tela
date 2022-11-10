@@ -5,6 +5,10 @@ const estilos = StyleSheet.create({
     flex: 1,
     padding: 16,
   },
+
+  viewFilmes: {
+    marginVertica: 8,
+  },
 });
 
 export default estilos;
