@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
-import { Text, View, Image } from "react-native";
+import { Text, View, FlatList } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import estilos from "./estilosResultados";
 import Api from "../../services/Api";
 import apikey from "../../../apiKey";
 import Loading from "../../Components/Loading";
+import CardFilme from "../../Components/CardFilme";
+import ItemSeparador from "../../Components/ItemSeparador";
+import ItemVazio from "../../Components/ItemVazio";
 
 const Resultados = ({ route }) => {
   const { filme } = route.params;
@@ -46,23 +49,26 @@ const Resultados = ({ route }) => {
       {loading && <Loading />}
 
       <View style={estilos.viewFilmes}>
-        {!loading &&
-          resultados.map((resultado) => {
-            return (
-              <View key={resultado.id}>
-                <Image
-                  style={estilos.imagem}
-                  source={{
-                    uri: `https://image.tmdb.org/t/p/original/${resultado.poster_path}`,
-                  }}
-                />
-                <Text>{resultado.title}</Text>
-              </View>
-            );
-          })}
+        {!loading && (
+          <FlatList
+            ItemSeparatorComponent={ItemSeparador}
+            ListFooterComponent={ItemVazio}
+            data={resultados}
+            renderItem={({ item }) => {
+              return <CardFilme filme={item} />;
+            }}
+            keyExtractor={(item) => item.id}
+          />
+        )}
       </View>
     </SafeAreaView>
   );
 };
 
 export default Resultados;
+/* 
+resultados.map((resultado) => {
+            return (
+              
+            );
+          })*/
