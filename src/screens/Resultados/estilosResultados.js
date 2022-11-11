@@ -9,6 +9,10 @@ const estilos = StyleSheet.create({
   viewFilmes: {
     marginVertica: 8,
   },
+
+  imagem: {
+    height: 125,
+  },
 });
 
 export default estilos;
