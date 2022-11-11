@@ -2,6 +2,7 @@ node_modules/
 .expo/
 dist/
 apiKey.js
+chave.api
 npm-debug.*
 *.jks
 *.p8
