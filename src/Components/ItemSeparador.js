@@ -19,8 +19,9 @@ const estilos = StyleSheet.create({
   },
 
   linhas: {
-    backgroundColor: "red",
-    height: 2,
+    backgroundColor: "#5451a6",
+    height: 1,
     width: "80%",
+    opacity: 0.5,
   },
 });
