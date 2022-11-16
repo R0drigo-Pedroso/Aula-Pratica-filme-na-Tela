@@ -1,11 +1,18 @@
-import { StyleSheet, Text, View, Image, Pressable } from "react-native";
+import { Text, View, Image, Pressable } from "react-native";
 import React from "react";
 
 import estilos from "./estilosCardFilme";
 import { Ionicons } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 const CardFilme = ({ filme }) => {
   const { title, poster_path } = filme;
+
+  /* Acessar recursos do React Navigation (sem props!) */
+  const navigation = useNavigation();
+  const leiaMais = () => {
+    navigation.navigate("Detalhes");
+  };
 
   return (
     <View style={estilos.cards}>
@@ -21,7 +28,7 @@ const CardFilme = ({ filme }) => {
         <Text style={estilos.titulo}>{title}</Text>
 
         <View style={estilos.botoes}>
-          <Pressable style={estilos.botao}>
+          <Pressable style={estilos.botao} onPress={leiaMais}>
             <Text style={estilos.botaoTexto}>
               <Ionicons name="reader" size={20} color="white" />
               Leia Mais
