@@ -11,7 +11,7 @@ const CardFilme = ({ filme }) => {
   /* Acessar recursos do React Navigation (sem props!) */
   const navigation = useNavigation();
   const leiaMais = () => {
-    navigation.navigate("Detalhes");
+    navigation.navigate("Detalhes", { filme });
   };
 
   return (

@@ -1,4 +1,4 @@
-import { StatusBar } from "react-native";
+import { Button, StatusBar } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
@@ -38,7 +38,22 @@ const App = () => {
           <stack.Screen name="Sobre" component={Sobre} />
           <stack.Screen name="Privacidade" component={Privacidade} />
           <stack.Screen name="Resultados" component={Resultados} />
-          <stack.Screen name="Detalhes" component={Detalhes} />
+
+          <stack.Screen
+            name="Detalhes"
+            component={Detalhes}
+            options={({ navigation }) => {
+              return {
+                headerRight: () => (
+                  <Button
+                    color="#5154a6"
+                    title="Home"
+                    onPress={() => navigation.navigate("Home")}
+                  />
+                ),
+              };
+            }}
+          />
 
           <stack.Screen
             name="Favoritos"
