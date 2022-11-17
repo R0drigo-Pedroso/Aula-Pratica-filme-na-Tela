@@ -5,6 +5,8 @@ import estilos from "./estilosCardFilme";
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
+import fundo from "../../assets/image/sem-imagem.jpg";
+
 const CardFilme = ({ filme }) => {
   const { title, poster_path } = filme;
 
@@ -19,9 +21,13 @@ const CardFilme = ({ filme }) => {
       <Image
         style={estilos.imagem}
         resizeMode="cover"
-        source={{
-          uri: `https://image.tmdb.org/t/p/original/${poster_path}`,
-        }}
+        source={
+          filme.backdrop_path
+            ? {
+                uri: `https://image.tmdb.org/t/p/original/${poster_path}`,
+              }
+            : fundo
+        }
       />
 
       <View style={estilos.corpo}>

@@ -4,6 +4,8 @@ import React from "react";
 import estilos from "./estilosDetalhes";
 import { SafeAreaView } from "react-native-safe-area-context";
 
+import fundo from "../../../assets/image/sem-imagem.jpg";
+
 /* Props de route para acesso aos dados trafegados entre a navegação entre as telas/rotas */
 const Detalhes = ({ route }) => {
   // console.log(route);
@@ -16,9 +18,13 @@ const Detalhes = ({ route }) => {
       <View style={estilos.container}>
         <ImageBackground
           style={estilos.imagem}
-          source={{
-            uri: `https://image.tmdb.org/t/p/original/${filme.backdrop_path}`,
-          }}
+          source={
+            filme.backdrop_path
+              ? {
+                  uri: `https://image.tmdb.org/t/p/original/${filme.backdrop_path}`,
+                }
+              : fundo
+          }
         >
           <Text style={estilos.titulo}>{filme.title}</Text>
         </ImageBackground>
