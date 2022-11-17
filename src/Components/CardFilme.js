@@ -24,7 +24,6 @@ const CardFilme = ({ filme }) => {
     /* Etapas para uso do AsyncStorage */
     /* 1 - Carregamento do storage do aparelho (se houver, caso contrario retorno null) */
     const filmesFavoritos = await AsyncStorage.getItem("@favoritos");
-    console.log(filmesFavoritos);
     /* 2 - Havendo storage prévio, transformamos os dados do filme em objetos e os guardando numa lista (array) */
     let listaDeFilmes = JSON.parse(filmesFavoritos);
     /* 3 - Se a lista não for indefinida, vamos iniciar-la como uma array vazio */
