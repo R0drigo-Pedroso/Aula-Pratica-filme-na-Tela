@@ -1,4 +1,4 @@
-import { SafeAreaView, StyleSheet, Text, View } from "react-native";
+import { SafeAreaView, Text } from "react-native";
 
 import estilos from "./estilosFavoritos";
 
