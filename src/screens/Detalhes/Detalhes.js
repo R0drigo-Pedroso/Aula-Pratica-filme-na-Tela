@@ -4,6 +4,7 @@ import React from "react";
 import estilos from "./estilosDetalhes";
 import { SafeAreaView } from "react-native-safe-area-context";
 
+import { FormataData } from "../../Utils/Funcoes";
 import fundo from "../../../assets/image/sem-imagem.jpg";
 
 /* Props de route para acesso aos dados trafegados entre a navegação entre as telas/rotas */
@@ -32,7 +33,7 @@ const Detalhes = ({ route }) => {
         <View style={estilos.conteudo}>
           <View style={estilos.info}>
             <Text>Avaliação: {filme.vote_average}</Text>
-            <Text>Ano de Lançamento: {filme.release_date}</Text>
+            <Text>Ano de Lançamento: {FormataData(filme.release_date)}</Text>
             <Text>Linguagem: {filme.original_language}</Text>
           </View>
 
