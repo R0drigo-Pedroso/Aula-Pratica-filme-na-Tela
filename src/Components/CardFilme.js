@@ -30,6 +30,20 @@ const CardFilme = ({ filme }) => {
     if (!listaDeFilmes) {
       listaDeFilmes = [];
     }
+
+    /* Etapa de veriicação de filme já salvo */
+    /* Para cada filme existente na listaDeFilme (se existir) */
+    for (let filmeExistente in listaDeFilmes) {
+      /* vefiricar se o id do filme existente é igual o filme do card */
+      if (listaDeFilmes[filmeExistente].id == filme.id) {
+        Alert.alert(
+          "Ops!",
+          "Esse filme já se encontra na sua lista de favoritos"
+        );
+        return;
+      }
+    }
+
     /* 4 - Adicionamos os dados do filme na lista (array) */
     listaDeFilmes.push(filme);
     /* 5 - Finalmente, salvamos COMO STRING no storage do dispositivo */

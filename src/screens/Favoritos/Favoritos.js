@@ -58,7 +58,7 @@ const Favoritos = () => {
       {
         text: "Sim, Quero excluir",
         onPress: async () => {
-          await AsyncStorage.removeItem("@favaritos");
+          await AsyncStorage.removeItem("@favoritos");
           setlistaFavoritos([]);
         },
       },
