@@ -1,7 +1,7 @@
 /* Importe o AsyncStorage de expo, Não use do react-native padrão */
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
-import { Text, View, Image, Pressable, Alert } from "react-native";
+import { Text, View, Image, Pressable, Alert, Vibration } from "react-native";
 import React from "react";
 
 import estilos from "./estilosCardFilme";
@@ -40,6 +40,7 @@ const CardFilme = ({ filme }) => {
           "Ops!",
           "Esse filme já se encontra na sua lista de favoritos"
         );
+        Vibration.vibrate();
         return;
       }
     }
