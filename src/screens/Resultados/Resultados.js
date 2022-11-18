@@ -4,7 +4,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 import estilos from "./estilosResultados";
 import Api from "../../services/Api";
-import apikey from "../../../apiKey";
+import apikey from "../../../apikey";
 import Loading from "../../Components/Loading";
 import CardFilme from "../../Components/CardFilme";
 import ItemSeparador from "../../Components/ItemSeparador";
