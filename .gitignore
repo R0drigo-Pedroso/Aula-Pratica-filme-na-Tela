@@ -3,7 +3,6 @@ node_modules/
 dist/
 apiKey.js
 chave.api
-chave-api.txt
 npm-debug.*
 *.jks
 *.p8
