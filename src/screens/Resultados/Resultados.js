@@ -66,9 +66,3 @@ const Resultados = ({ route }) => {
 };
 
 export default Resultados;
-/* 
-resultados.map((resultado) => {
-            return (
-              
-            );
-          })*/
