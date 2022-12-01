@@ -3,7 +3,6 @@ import { Ionicons } from "@expo/vector-icons";
 import { useEffect, useState } from "react";
 import {
   Alert,
-  Button,
   Pressable,
   SafeAreaView,
   ScrollView,
