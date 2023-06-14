@@ -1,4 +1,4 @@
-# App Dá Hora Filmes
+# App Filme na Tela
 
 Aplicativo React Native que permite a busca por filmes usando a API **TMDB (The MovieDB Database)** e a seleção de filmes favoritos usando armazenamento offline/local no próprio dispositivo.
 
